@@ -1,4 +1,4 @@
-import apiKey from "../scripts/rapid-api-key.js";
+import apiKey from "/scripts/rapid-api-key.js";
 const scoresDiv = document.getElementById("scores");
 const loadingDiv = document.getElementById("loading");
 
@@ -61,7 +61,7 @@ function displayScores(games) {
     return;
   }
 
-  fetch(`../scripts/times.json`)
+  fetch(`/scripts/times.json`)
     .then((response) => response.json())
     .then((data) => {
       const teamsLogos = {};

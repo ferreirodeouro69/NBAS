@@ -62,7 +62,12 @@ document.addEventListener("DOMContentLoaded", function () {
                   playerItem.addEventListener("mouseover", function () {
                     playerItem.style.cursor = "pointer";
                     playerItem.style.backgroundColor = `#${normalizedPrimaryColor}`;
-                    playerItem.style.color = "#000000"; // Texto preto
+
+                    if(normalizedPrimaryColor === "#000000")
+                      playerItem.style.color = "#000000"; // Texto preto
+                    else
+                        playerItem.style.color = "#ffffff";
+
                     playerItem.style.transition = "0.5s";
                   });
 
@@ -71,6 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     const primaryColorWithOpacity = `${normalizedPrimaryColor}99`; // 60% de opacidade
                     const secondaryColorWithOpacity = `${normalizedSecondaryColor}99`; // 60% de opacidade
                     teamItem.style.backgroundImage = `linear-gradient(#${primaryColorWithOpacity}, #${secondaryColorWithOpacity})`;
+                    playersList.style.backgroundColor = `#${normalizedPrimaryColor}`;
                     teamItem.style.color = "#fffff"; // Texto preto
                     teamItem.style.transition =
                       "background-image 1s ease-in, color 1s ease-in"; // Transição suave
@@ -80,6 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     teamItem.style.cursor = "pointer";
                     teamItem.style.backgroundImage = ""; // Remove o gradiente
                     teamItem.style.backgroundColor = "#575757d8"; // Cor padrão de fundo
+                    playersList.style.backgroundColor = "#575757d8";
                     teamItem.style.color = "#fffff"; // Texto padrão
                     teamItem.style.transition =
                       "background-color 1s ease-in, color 1s ease-in"; // Transição suave

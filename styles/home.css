@@ -54,6 +54,7 @@ h1 {
 }
 .game:hover {
   box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.75);
+  scale: 1.2;
 }
 .points {
   font-size: 3vw;
@@ -86,14 +87,15 @@ h1 {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  z-index: 1;
 }
-a{
-  color: #eee;
-  text-decoration: none;
+a, a:visited{
+  color: #bbb;
   font-weight: bold;
+  font-size: 1.3rem;
 }
-a:visited{
-  color: #bbbbbb;
-  text-decoration: none;
-  font-weight: bold;
+
+#cu {
+  position: absolute;
+  margin-right: 350px;
 }
